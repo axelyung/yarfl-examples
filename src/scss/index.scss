@@ -1,0 +1,128 @@
+@import "bootstrap/scss/functions";
+@import "./bootstrap-variables";
+@import "bootstrap/scss/bootstrap";
+@import "./utils/index";
+@import "react-select/dist/react-select";
+
+body {
+    background: $gray-100;
+}
+
+.tab-pane {
+    @extend .p-2;
+}
+
+$sidebar-width: 15rem;
+
+.app {
+    max-height: 100vh;
+
+}
+
+.sidebar {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: $sidebar-width;
+    background: $gray-200;
+    box-shadow: $box-shadow;
+    @extend .p-1;
+    h1 {
+        margin-bottom: 0rem;
+    }
+}
+
+.main {
+    padding: 2rem 2.5rem;
+    margin-left: $sidebar-width;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.disable-section {
+    position: relative;
+
+    &:before {
+        display: block;
+        z-index: 100;
+        content: '';
+        background: #FFF;
+        opacity: .5;
+        cursor: not-allowed;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
+
+.card {
+    @extend .p-1;
+    box-shadow: $box-shadow-sm;
+    border: none;
+    .corner-btn {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translate(.5rem, -.5rem);
+    }
+}
+
+.user-card {
+    border: 1px solid $gray-200;
+}
+
+.text-valid {
+    color: $green;
+}
+
+.code {
+    @extend .p-half;
+    background: $white;
+    border: 1px solid $gray-200;
+}
+
+.material-ui-control {
+    min-height: 5rem;
+    &.operating-system-wrapper {
+        height: 9rem;
+        .radio-btn {
+            margin-bottom: 0;
+            height: 2rem;
+        }
+    }
+}
+
+.bg-danger {
+    background: $danger;
+    color: $white!important;
+}
+
+.wizard-form h4 + div {
+    height: 10rem;
+}
+
+.form-group {
+    &.has-error > label {
+        color: $danger;
+    }   
+}
+
+form.card {
+    @extend .mb-1;
+}
+
+.form-btns {
+    margin-right: -1.5rem;
+    button {
+        @extend .f-right;
+        @extend .mr-half;
+    } 
+}
+
+.react-widgets-form {
+    label + div {
+        @extend .mb-1;
+    }
+}

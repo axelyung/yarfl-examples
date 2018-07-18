@@ -1,0 +1,82 @@
+﻿@mixin plr($padding) {
+    padding-left: $padding!important;
+    padding-right: $padding!important;
+}
+
+@mixin ptb($padding) {
+    padding-top: $padding!important;
+    padding-bottom: $padding!important;
+}
+
+@mixin mlr($margin) {
+    margin-left: $margin!important;
+    margin-right: $margin!important;
+}
+
+@mixin mtb($margin) {
+    margin-top: $margin!important;
+    margin-bottom: $margin!important;
+}
+
+// sass-lint:disable no-important
+$types: (
+    m: margin,
+    p: padding
+);
+
+$directions: (
+    t: top,
+    b: bottom,
+    l: left,
+    r: right
+);
+$sizes: (
+    0: 0,
+    half: .5rem,
+    1: 1rem,
+    2: 2rem,
+    3: 3rem,
+    4: 4rem
+);
+
+@each $t-label, $type in $types {
+    @each $s-label, $size in $sizes {
+        .#{$t-label}-#{$s-label} {
+            #{$type}: #{$size}!important;
+        }
+    }
+}
+
+@each $t-label, $type in $types {
+    @each $d-label, $direction in $directions {
+        @each $s-label, $size in $sizes {
+            .#{$t-label}#{$d-label}-#{$s-label} {
+                #{$type}-#{$direction}: #{$size}!important;
+            }
+        }
+    }
+}
+
+@each $s-label, $size in $sizes {
+    .mtb-#{$s-label} {
+        @include mtb($size);
+    }
+}
+
+@each $s-label, $size in $sizes {
+    .mlr-#{$s-label} {
+        @include mlr($size);
+    }
+}
+
+@each $s-label, $size in $sizes {
+    .ptb-#{$s-label} {
+        @include ptb($size);
+    }
+}
+
+@each $s-label, $size in $sizes {
+    .plr-#{$s-label} {
+        @include plr($size);
+    }
+}

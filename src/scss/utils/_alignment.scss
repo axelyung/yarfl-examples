@@ -1,0 +1,82 @@
+.f-right {
+    float: right;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-none {
+    float: none;
+}
+
+@mixin clearfix($pseudo: 'before') {
+    &::#{$pseudo} {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+.clearfix-before {
+    @include clearfix;
+}
+
+.clearfix-after {
+    @include clearfix('after');
+}
+
+.ta-right {
+    text-align: right;
+}
+
+.ta-left {
+    text-align: left;
+}
+
+.ta-center {
+    text-align: center;
+}
+
+@mixin mlr-auto {
+    margin: { 
+        left: auto;
+        right: auto;
+    }
+}
+
+.mlr-auto {
+    @include mlr-auto
+}
+
+.m-auto {
+    margin: auto;
+}
+
+@mixin center-block {
+    display: block;
+    @include mlr-auto;
+}
+
+.center-block {
+    @include center-block;
+}
+
+.abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.abs-v-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.abs-h-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
