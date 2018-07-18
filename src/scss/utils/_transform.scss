@@ -1,0 +1,19 @@
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+}
+
+@mixin translate-x($x) {
+    transform: translate($x, 0);
+}
+
+@mixin translate-y($y) {
+    transform: translate(0, $y);
+}
+
+@mixin scale($factor: 1) {
+    transform: scale($factor);
+}
+
+@mixin rotate($deg) {
+    transform: rotate($deg deg);
+}
