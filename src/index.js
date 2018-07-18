@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import bsd from 'bootstrap-size-display';
 
-import './index.css';
-import App from './App';
+import './styles.css';
+import App from './app/App';
 import registerServiceWorker from './registerServiceWorker';
-import { store } from './redux'
 
-const Render = () =>   
-    <MuiThemeProvider>
-        <Provider store={store}>
-            <App />
-        </Provider>
-    </MuiThemeProvider>
+if (window.location.hostname === 'localhost') {
+    bsd();
+}
 
-
-ReactDOM.render(<Render />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
