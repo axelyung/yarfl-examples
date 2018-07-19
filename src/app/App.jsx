@@ -67,14 +67,17 @@ export default () => (
         <HashRouter>
             <div className="app">
                 <div className="sidebar">
-                    <h1>YARFL</h1>
+                    <div className="header">
+                        <h1>YARFL</h1>
+                        <img src="./yarfl-logo.svg" className="App-logo" alt="logo" />
+                    </div>
                     <strong>Yet Another Redux Forms Library</strong>
                     <Route
                         path="/"
                         render={({ location }) => (
                             <ul className="mt-1">
                                 {routes.map(({ path, title }) => (
-                                    <li key={path}>
+                                    <li key={path} className="links">
                                         {location.pathname.includes(path) ? (
                                             <strong>{title}</strong>
                                         ) : (
@@ -87,7 +90,7 @@ export default () => (
                 </div>
                 <div className="main">
                     <Switch>
-                        {routes.map(({ path, component }) => <Route path={path} component={component} />)}
+                        {routes.map(({ path, component }) => <Route key={path} path={path} component={component} />)}
                         <Redirect to="/basic" />
                     </Switch>
                 </div>
