@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import { init } from 'yarfl/lib';
+import { init } from 'yarfl';
 
 import configs from './configs';
 
