@@ -87,6 +87,26 @@ export default () => (
                                 ))}
                             </ul>
                         )} />
+                    <div className="sidebar-footer">
+                        <a
+                            href="https://www.npmjs.com/package/yarfl"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            NPM
+                        </a>
+                        <a
+                            href="https://github.com/axelyung/yarfl"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Github
+                        </a>
+                        <a
+                            href="https://axelyung.github.io/yarfl"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Docs
+                        </a>
+                    </div>
                 </div>
                 <div className="main">
                     <Switch>
