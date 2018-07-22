@@ -143,7 +143,7 @@ export default connect.reactWidgetsForm(class extends React.Component {
                     <h1>Form with <code>react-widgets</code></h1>
                     <i>An example with the&nbsp;
                         {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                        <a href="https://github.com/jquense/react-widgets" target="_blank">
+                        <a href="https://github.com/jquense/react-widgets" target="_blank" rel="noopener noreferrer">
                             <code>react-widgets</code>
                         </a>&nbsp;library.
                     </i>

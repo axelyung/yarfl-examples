@@ -13,7 +13,10 @@ export default connect.reactSelectForm(({ reactSelectForm }) => {
                 <h1>Form with <code>react-select</code></h1>
                 <i>An example with the&nbsp;
                     {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                    <a href="https://github.com/JedWatson/react-select" target="_blank">
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://github.com/JedWatson/react-select">
                         <code>react-select</code>
                     </a>&nbsp;library.
                 </i>

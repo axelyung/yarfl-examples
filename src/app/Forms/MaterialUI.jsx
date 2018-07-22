@@ -34,7 +34,10 @@ export default connect.materialUiForm(({ materialUiForm }) => {
                     <h1>Form with <code>material-ui</code></h1>
                     <i>An example with&nbsp;
                         {/* eslint-disable-next-line react/jsx-no-target-blank */}
-                        <a href="https://material-ui.com/" target="_blank">
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://material-ui.com/">
                             <code>material-ui</code>
                         </a>&nbsp;components.
                     </i>

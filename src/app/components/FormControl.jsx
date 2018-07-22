@@ -4,7 +4,7 @@ import ReactSelect from 'react-select';
 /* eslint-disable  */
 export default class extends Component {
     get input() {
-        const { bind, label, options, type, value, placeholder, multiple, extra } = this.props.field;
+        const { bind, label, options, type, placeholder, multiple, extra } = this.props.field;
         switch (type) {
             case 'checkbox':
                 return (
