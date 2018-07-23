@@ -27,8 +27,30 @@ $sidebar-width: 15rem;
     background: $gray-200;
     box-shadow: $box-shadow;
     @extend .p-1;
-    h1 {
-        margin-bottom: 0rem;
+    .header {
+        display: flex;
+        @extend .mb-half;
+        h1 {
+            margin-bottom: 0rem;
+            @extend .mr-half;
+        }
+        img {
+            height: 3rem;
+        }
+    }
+    .links {
+        font-size: 1.125rem;
+    }
+    &-footer {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        align-content: space-between;
+        margin-bottom: .5rem;
+        a {
+            margin-right: .5rem;
+            font-size: 1.25rem;
+        }
     }
 }
 
